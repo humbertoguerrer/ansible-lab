@@ -1,0 +1,8 @@
+---
+# tasks file for create-user
+- name: create use
+  become: true
+  user:
+          name: renato
+          shell: /bin/bash
+          password: "{ password }"

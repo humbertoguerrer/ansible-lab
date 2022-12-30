@@ -1,0 +1,14 @@
+---
+- name: Instalar pacotes essenciais - debian
+  become: true
+  apt:
+    name: "{{ pacotes }}"
+    state: present
+  when: ansible_distribution == "Ubuntu"
+
+- name: Instalar pacotes essenciais - centos
+  become: true
+  yum:
+    name: "{{ pacotes }}"
+    state: present
+  when: ansible_distribution == "CentOS"

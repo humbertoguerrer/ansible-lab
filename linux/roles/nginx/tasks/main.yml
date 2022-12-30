@@ -1,0 +1,17 @@
+---
+- name: Instalar nginx
+  become: true
+  apt: name=nginx state=latest
+  notify: Reiniciando nginx
+
+- name: Copiar arquivos de configuração
+  become: true
+  copy: src=default.conf dest=/etc/nginx/conf.d/ 
+  notify: Reiniciando nginx
+
+- name: Copiar index.html
+  become: true
+  template: src=index.html dest=/var/www/html
+  notify: Reiniciando nginx
+
+...

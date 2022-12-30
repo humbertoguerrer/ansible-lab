@@ -1,0 +1,9 @@
+---
+- name: Install multiple packages
+  win_chocolatey:
+    name:
+    - firefox
+    - putty
+    - notepadplusplus
+    state: present
+...

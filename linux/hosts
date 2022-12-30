@@ -1,0 +1,14 @@
+[web_01]
+servidor1 ansible_host=192.168.56.5
+servidor2 ansible_host=192.168.15.5
+
+[db_01]
+servidor3 ansible_host=192.168.15.6
+
+[filial_01:children]
+web_01
+db_01
+
+[filial_01:vars]
+ansible_user=vagrant
+ansible_port=22

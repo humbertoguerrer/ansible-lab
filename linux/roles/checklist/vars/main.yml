@@ -1,0 +1,5 @@
+pacotes:
+    - net-tools
+    - vim
+    - telnet
+    - nmap

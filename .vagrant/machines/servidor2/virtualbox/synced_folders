@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"type":"virtualbox","guestpath":"/vagrant","hostpath":"/home/humberto/vm_shared_folder","disabled":false,"__vagrantfile":true}}}
